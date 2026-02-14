@@ -1,0 +1,232 @@
+{
+  "brand": {
+    "name": "Artemis Beauty Salon",
+    "tagline": "Luxury beauty and wellness experience",
+    "logo": "/logo/logo.png"
+  },
+  "seo": {
+    "title": "Artemis Beauty Salon | Luxury Beauty and Wellness",
+    "description": "Artemis Beauty Salon offers premium hair, skin, and wellness treatments in a modern luxury setting.",
+    "keywords": "beauty salon, hair services, skin treatments, nail services, luxury beauty, wellness",
+    "openGraphImage": "/images/og-cover.png"
+  },
+  "navigation": {
+    "ariaLabel": "Main navigation",
+    "menu": [
+      { "name": "Home", "href": "/" },
+      { "name": "About", "href": "/about" },
+      { "name": "Services", "href": "/services" },
+      { "name": "Products", "href": "/products" },
+      { "name": "Contact", "href": "/contact" }
+    ]
+  },
+  "hero": {
+    "title": "Artemis Beauty Salon",
+    "subtitle": "Premium beauty and wellness services tailored for your glow.",
+    "primaryCta": {
+      "label": "Book Appointment",
+      "href": "/contact"
+    },
+    "secondaryCta": {
+      "label": "Explore Services",
+      "href": "/services"
+    },
+    "backgroundImage": "/images/hero.png"
+  },
+  "about": {
+    "title": "Meet Artemis",
+    "name": "Artemis",
+    "role": "Owner & Lead Beauty Specialist",
+    "description": "Artemis founded Artemis Beauty Salon with a vision to combine technical precision and warm hospitality. With years of salon experience, she focuses on personalized beauty treatments that help every client feel confident, relaxed, and beautifully cared for.",
+    "image": "/images/Screenshot_20260214_171611_Instagram.jpg"
+  },
+  "servicesSection": {
+    "title": "Signature Services",
+    "subtitle": "Treatments designed to elevate your routine."
+  },
+  "services": [
+    {
+      "title": "Nail Services",
+      "description": "Luxury manicures and pedicures with premium care products.",
+      "image": "/images/service-nails.png"
+    },
+    {
+      "title": "Face & BodyTreatment",
+      "description": "Advanced face and body treatments tailored for glowing, healthy skin.",
+      "image": "/images/service-skin.png"
+    },
+    {
+      "title": "Professional Makeup",
+      "description": "Professional makeup services for events, bridal looks, and special occasions.",
+      "image": "/images/service-makeup.png"
+    },
+    {
+      "title": "Hair Removal",
+      "description": "Smooth, precise hair removal services with client comfort in focus.",
+      "image": "/images/service-hair.png"
+    }
+  ],
+  "products": {
+    "title": "BABOR Products",
+    "description": "Explore premium BABOR skincare and discover our recommended selections.",
+    "showcaseImage": "/images/babor-showcase.png",
+    "showcaseImageAlt": "BABOR product collection showcase",
+    "shopCtaLabel": "Shop BABOR Products",
+    "shopUrl": "https://us.babor.com/",
+    "affiliateUrl": "https://cy.babor.com/institute/beauty-salon-artemis-vasiliadou",
+    "showcaseCaption": "Tap the image to view BABOR products.",
+    "partnerLogo": "/images/babor.png",
+    "partnerLogoAlt": "BABOR logo",
+    "partnerTitle": "Official BABOR Representative",
+    "partnerDescription": "Artemis Beauty Salon is proud to offer authentic BABOR skincare and expert product guidance tailored to your needs."
+  },
+  "instagram": {
+    "title": "Instagram",
+    "subtitle": "Follow our latest transformations and beauty moments.",
+    "ctaLabel": "Visit Instagram",
+    "ctaHref": "https://www.instagram.com/beauty_salon_artemis_?igsh=andkaTc0cXZhNWVo",
+    "embedTitle": "Instagram feed",
+    "embedUrl": "https://www.instagram.com/beauty_salon_artemis_/embed",
+    "embedFallbackText": "If the feed does not load, use a widget URL from LightWidget or Elfsight in instagram.embedUrl."
+  },
+  "contactSection": {
+    "title": "Book Your Experience",
+    "subtitle": "Reach out and we will help plan your perfect service."
+  },
+  "appointmentForm": {
+    "title": "Schedule Your Appointment",
+    "subtitle": "Fill in your details and we will reserve your beauty session.",
+    "fields": {
+      "name": "Name",
+      "surname": "Surname",
+      "phone": "Phone",
+      "date": "Date",
+      "time": "Time",
+      "service": "Service"
+    },
+    "submitLabel": "Confirm Appointment",
+    "successMessage": "Appointment request sent successfully.",
+    "errorMessage": "Could not send appointment request. Please try again.",
+    "validationError": "Please complete all fields.",
+    "servicePlaceholder": "Select a service",
+    "timePlaceholder": "Select time",
+    "availabilityLabel": "Availability for selected date",
+    "availabilityOpenLabel": "Open",
+    "availabilityBookedLabel": "Booked",
+    "selectDateToViewAvailability": "Select a date to view open and booked time slots.",
+    "slotUnavailableError": "Selected date and time is already booked. Please choose another slot.",
+    "timeSlots": [
+      "09:00",
+      "10:00",
+      "11:00",
+      "12:00",
+      "15:00",
+      "16:00",
+      "17:00",
+      "18:00"
+    ]
+  },
+  "newsletter": {
+    "title": "Stay In The Artemis Circle",
+    "subtitle": "Subscribe for exclusive offers, beauty tips, and first access to seasonal promotions.",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Enter your email address",
+    "submitLabel": "Subscribe",
+    "successMessage": "Thank you for subscribing.",
+    "errorMessage": "Subscription failed. Please try again.",
+    "invalidEmailMessage": "Please enter a valid email address."
+  },
+  "contact": {
+    "address": "Rizokarpasou 23A, Agiou Syla, Ypsonas, Limassol",
+    "phone": "+357 99 309380",
+    "email": "info@artemisbeautysalon.com",
+    "hours": "Mon - Sat: 09:00 - 13:00, 15:00 - 19:00"
+  },
+  "mapSection": {
+    "title": "Find Us",
+    "description": "Visit Artemis Beauty Salon at our location.",
+    "ctaLabel": "Open In Google Maps",
+    "href": "https://www.google.com/maps/place/Beaty+Salon+Artemis/@34.7018585,32.9640675,17.12z/data=!4m6!3m5!1s0x14e7319d7a2494c1:0x2d8c170f2fec980d!8m2!3d34.7039741!4d32.9654877!16s%2Fg%2F11gk9dzwwx?entry=ttu&g_ep=EgoyMDI2MDIxMS4wIKXMDSoASAFQAw%3D%3D"
+  },
+  "social": {
+    "instagram": {
+      "label": "Instagram",
+      "href": "https://www.instagram.com/beauty_salon_artemis_?igsh=andkaTc0cXZhNWVo"
+    },
+    "facebook": {
+      "label": "Facebook",
+      "href": "https://www.facebook.com/beautysallonartemis/"
+    }
+  },
+  "pages": {
+    "home": {
+      "instagramPlaceholderTitle": "Beauty Journal",
+      "instagramPlaceholderDescription": "Discover our latest transformations, beauty tips, and signature looks from Artemis Beauty Salon."
+    },
+    "about": {
+      "title": "Our Story",
+      "description": "Artemis Beauty Salon was designed as a refined sanctuary where artistry, care, and comfort meet."
+    },
+    "services": {
+      "title": "Services",
+      "description": "Choose from curated treatments led by experienced beauty professionals."
+    },
+    "products": {
+      "title": "Products",
+      "description": "Shop BABOR products through Artemis Beauty Salon."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Get in touch to reserve your appointment or ask about custom service packages."
+    },
+    "admin": {
+      "title": "Appointments Admin",
+      "description": "View and manage all submitted appointments."
+    }
+  },
+  "adminPanel": {
+    "manualSectionTitle": "Add Appointment Manually",
+    "manualSectionSubtitle": "Create bookings for walk-ins, phone calls, or messages.",
+    "manualCreateLabel": "Add Appointment",
+    "manualSuccessMessage": "Appointment added successfully.",
+    "manualErrorMessage": "Could not add appointment.",
+    "manualValidationError": "Please complete all manual appointment fields.",
+    "calendarViewLabel": "Calendar View",
+    "listViewLabel": "List View",
+    "monthPreviousLabel": "Previous Month",
+    "monthNextLabel": "Next Month",
+    "selectedDateLabel": "Selected Date",
+    "appointmentsForDateLabel": "Appointments For Date",
+    "noAppointmentsForDate": "No appointments on this date.",
+    "appointmentCountLabel": "appointments",
+    "weekdays": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    "statusLabel": "Status",
+    "createdLabel": "Created",
+    "actionsLabel": "Actions",
+    "statuses": {
+      "pending": "Pending",
+      "confirmed": "Confirmed",
+      "cancelled": "Cancelled"
+    },
+    "updateLabel": "Update",
+    "deleteLabel": "Delete",
+    "refreshLabel": "Refresh",
+    "loadingLabel": "Loading appointments...",
+    "emptyLabel": "No appointments yet.",
+    "loadError": "Could not load appointments.",
+    "manageError": "Could not update appointment.",
+    "unauthorizedError": "Unauthorized access. Please login to admin."
+  },
+  "adminAuth": {
+    "title": "Admin Access",
+    "subtitle": "Enter the admin password to manage appointments.",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "Enter admin password",
+    "submitLabel": "Login",
+    "logoutLabel": "Logout",
+    "errorMessage": "Invalid password. Please try again."
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  }
+}

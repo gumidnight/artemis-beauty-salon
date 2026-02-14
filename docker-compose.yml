@@ -1,0 +1,25 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: artemis-beauty-salon
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      ADMIN_PANEL_PASSWORD: ${ADMIN_PANEL_PASSWORD:-change-this-password}
+      ADMIN_PANEL_SECRET: ${ADMIN_PANEL_SECRET:-change-this-secret}
+      NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:-https://artemisbeautysalon.com}
+    ports:
+      - "127.0.0.1:3000:3000"
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
+
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: artemis-cloudflared
+    command: tunnel --no-autoupdate run --token ${CLOUDFLARE_TUNNEL_TOKEN}
+    depends_on:
+      - app
+    restart: unless-stopped

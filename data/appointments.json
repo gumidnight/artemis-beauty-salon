@@ -1,0 +1,35 @@
+[
+  {
+    "id": "96007a6a-c1c4-4cab-a7a0-1ce06eef1c0b",
+    "name": "Alexandros",
+    "surname": "Georgiou",
+    "phone": "96304316",
+    "date": "2026-02-20",
+    "time": "11:00",
+    "service": "Skin Treatments",
+    "status": "pending",
+    "createdAt": "2026-02-14T16:24:21.359Z"
+  },
+  {
+    "id": "80765619-88fa-4668-997c-82107f886c08",
+    "name": "Alexandros",
+    "surname": "Georgiou",
+    "phone": "96304316",
+    "date": "2026-02-14",
+    "time": "09:00",
+    "service": "Hair Services",
+    "status": "confirmed",
+    "createdAt": "2026-02-14T15:38:11.062Z"
+  },
+  {
+    "id": "419bb7e3-a7da-4c75-af1c-67e862262ba8",
+    "name": "Alexandros",
+    "surname": "Georgiou",
+    "phone": "96304316",
+    "date": "2026-02-27",
+    "time": "11:00",
+    "service": "Nail Services",
+    "status": "pending",
+    "createdAt": "2026-02-14T15:37:50.695Z"
+  }
+]
