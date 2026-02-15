@@ -42,6 +42,7 @@ export default function ProductsPage() {
               alt={site.products.showcaseImageAlt}
               width={1600}
               height={900}
+              loading="lazy"
               className="h-auto w-full object-cover transition duration-500 group-hover:scale-[1.02]"
               sizes="100vw"
             />
@@ -59,7 +60,7 @@ export default function ProductsPage() {
       <section className="mx-auto w-full max-w-6xl px-4 pb-8 md:px-8 md:pb-12">
         <div className="flex flex-col items-center gap-4 text-center">
           <div className="relative h-16 w-48 overflow-hidden md:h-20 md:w-56">
-            <Image src={site.products.partnerLogo} alt={site.products.partnerLogoAlt} fill className="object-contain" sizes="224px" />
+            <Image src={site.products.partnerLogo} alt={site.products.partnerLogoAlt} fill loading="lazy" className="object-contain" sizes="224px" />
           </div>
           <div className="space-y-1">
             <p className="text-lg font-semibold">{site.products.partnerTitle}</p>

@@ -25,6 +25,7 @@ export default function ServicesPage() {
                 alt={service.title}
                 width={1600}
                 height={1200}
+                loading="lazy"
                 className="h-auto w-full object-contain"
                 sizes="100vw"
               />

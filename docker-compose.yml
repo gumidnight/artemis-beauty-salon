@@ -4,6 +4,7 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: artemis-beauty-salon
+    user: "${APP_UID:-1000}:${APP_GID:-1000}"
     environment:
       NODE_ENV: production
       PORT: 3000

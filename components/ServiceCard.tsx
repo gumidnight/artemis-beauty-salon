@@ -19,6 +19,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
           src={service.image}
           alt={service.title}
           fill
+          loading="lazy"
           className="object-cover object-[65%_center] transition duration-500 group-hover:scale-105"
           sizes="(max-width: 768px) 100vw, 33vw"
         />

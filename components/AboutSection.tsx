@@ -11,6 +11,7 @@ export default function AboutSection() {
             src={site.about.image}
             alt={site.about.title}
             fill
+            loading="lazy"
             className="object-cover object-[center_18%]"
             sizes="(max-width: 768px) 100vw, 50vw"
           />

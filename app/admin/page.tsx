@@ -10,7 +10,11 @@ export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: `${site.pages.admin.title} | ${site.brand.name}`,
-  description: site.pages.admin.description
+  description: site.pages.admin.description,
+  robots: {
+    index: false,
+    follow: false
+  }
 };
 
 export default function AdminPage() {
