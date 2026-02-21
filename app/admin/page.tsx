@@ -1,7 +1,5 @@
 export const runtime = 'edge';
 
-
-
 import type { Metadata } from "next";
 import { cookies } from "next/headers";
 import site from "@/content/site.json";
@@ -21,9 +19,10 @@ export const metadata: Metadata = {
   }
 };
 
-export default function AdminPage() {
-  const sessionCookie = cookies().get(ADMIN_SESSION_COOKIE)?.value;
-  const isAuthenticated = isValidAdminSession(sessionCookie);
+export default async function AdminPage() {
+  const cookieStore = await cookies();
+  const sessionCookie = cookieStore.get(ADMIN_SESSION_COOKIE)?.value;
+  const isAuthenticated = await isValidAdminSession(sessionCookie);
 
   return (
     <>

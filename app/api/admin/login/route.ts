@@ -1,10 +1,7 @@
 export const runtime = 'edge';
 
-
-
 import { NextResponse } from "next/server";
 import { ADMIN_SESSION_COOKIE, createAdminSessionValue, verifyAdminPassword } from "@/lib/admin-auth";
-
 
 export async function POST(request: Request) {
   const payload = await request.json();
@@ -17,10 +14,12 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "INVALID_CREDENTIALS" }, { status: 401 });
   }
 
+  const sessionValue = await createAdminSessionValue(payload.password);
+
   const response = NextResponse.json({ success: true });
   response.cookies.set({
     name: ADMIN_SESSION_COOKIE,
-    value: createAdminSessionValue(),
+    value: sessionValue,
     httpOnly: true,
     sameSite: "lax",
     secure: process.env.NODE_ENV === "production",
