@@ -1,7 +1,10 @@
+export const runtime = 'edge';
+
+
+
 import { NextResponse } from "next/server";
 import { addSubscriber, isValidEmail } from "@/lib/subscribers";
 
-export const runtime = "nodejs";
 
 export async function POST(request: Request) {
   const payload = await request.json();

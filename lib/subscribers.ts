@@ -1,57 +1,54 @@
-import { mkdir, readFile, writeFile } from "node:fs/promises";
-import path from "node:path";
-
 export type Subscriber = {
   email: string;
   createdAt: string;
 };
 
-const dataDir = path.join(process.cwd(), "data");
-const subscribersFile = path.join(dataDir, "subscribers.json");
-
-async function ensureStore() {
-  await mkdir(dataDir, { recursive: true });
-
-  try {
-    await readFile(subscribersFile, "utf-8");
-  } catch {
-    await writeFile(subscribersFile, "[]\n", "utf-8");
-  }
+// Note: In production, bind a KV namespace called SUBSCRIBERS_KV
+async function getKV() {
+  // @ts-ignore - KV binding will be available at runtime on Cloudflare
+  return typeof SUBSCRIBERS_KV !== 'undefined' ? SUBSCRIBERS_KV : null;
 }
 
-export async function readSubscribers(): Promise<Subscriber[]> {
-  await ensureStore();
-  const raw = await readFile(subscribersFile, "utf-8");
-
-  try {
-    return JSON.parse(raw) as Subscriber[];
-  } catch {
+async function getSubscribers(): Promise<Subscriber[]> {
+  const kv = await getKV();
+  if (!kv) {
+    console.warn('KV not available, using empty array');
     return [];
   }
+  
+  const data = await kv.get('subscribers', { type: 'json' });
+  return data || [];
 }
 
-async function writeSubscribers(subscribers: Subscriber[]) {
-  await ensureStore();
-  await writeFile(subscribersFile, `${JSON.stringify(subscribers, null, 2)}\n`, "utf-8");
+async function saveSubscribers(subscribers: Subscriber[]): Promise<void> {
+  const kv = await getKV();
+  if (!kv) {
+    console.warn('KV not available, cannot save');
+    return;
+  }
+  
+  await kv.put('subscribers', JSON.stringify(subscribers));
+}
+
+export async function addSubscriber(email: string): Promise<void> {
+  const subscribers = await getSubscribers();
+  
+  if (subscribers.some(s => s.email === email)) {
+    throw new Error('Email already subscribed');
+  }
+  
+  subscribers.push({
+    email,
+    createdAt: new Date().toISOString(),
+  });
+  
+  await saveSubscribers(subscribers);
+}
+
+export async function getAllSubscribers(): Promise<Subscriber[]> {
+  return await getSubscribers();
 }
 
 export function isValidEmail(email: string): boolean {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-}
-
-export async function addSubscriber(email: string): Promise<{ success: boolean; duplicate: boolean }> {
-  const normalizedEmail = email.trim().toLowerCase();
-  const subscribers = await readSubscribers();
-
-  if (subscribers.some((item) => item.email.toLowerCase() === normalizedEmail)) {
-    return { success: true, duplicate: true };
-  }
-
-  subscribers.unshift({
-    email: normalizedEmail,
-    createdAt: new Date().toISOString()
-  });
-
-  await writeSubscribers(subscribers);
-  return { success: true, duplicate: false };
 }

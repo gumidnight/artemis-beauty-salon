@@ -1,0 +1,14 @@
+name = "artemis-beauty-salon"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = ".vercel/output/static"
+
+# You'll need to create these KV namespaces in Cloudflare Dashboard
+# and replace the IDs below
+[[kv_namespaces]]
+binding = "APPOINTMENTS_KV"
+id = "YOUR_APPOINTMENTS_KV_ID"
+
+[[kv_namespaces]]
+binding = "SUBSCRIBERS_KV"
+id = "YOUR_SUBSCRIBERS_KV_ID"

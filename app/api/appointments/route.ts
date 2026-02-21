@@ -1,3 +1,7 @@
+export const runtime = 'edge';
+
+
+
 import { NextRequest, NextResponse } from "next/server";
 import {
   createAppointment,
@@ -9,7 +13,6 @@ import {
 import { ADMIN_SESSION_COOKIE, isValidAdminSession } from "@/lib/admin-auth";
 import site from "@/content/site.json";
 
-export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 export async function GET(request: NextRequest) {

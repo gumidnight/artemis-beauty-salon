@@ -1,8 +1,11 @@
+export const runtime = 'edge';
+
+
+
 import { NextRequest, NextResponse } from "next/server";
 import { deleteAppointment, isAppointmentStatus, updateAppointmentStatus } from "@/lib/appointments";
 import { ADMIN_SESSION_COOKIE, isValidAdminSession } from "@/lib/admin-auth";
 
-export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 export async function PATCH(request: NextRequest, { params }: { params: { id: string } }) {

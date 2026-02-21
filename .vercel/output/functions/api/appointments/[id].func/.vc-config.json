@@ -1,0 +1,18 @@
+{
+  "runtime": "edge",
+  "name": "api/appointments/[id]",
+  "deploymentTarget": "v8-worker",
+  "entrypoint": "index.js",
+  "assets": [],
+  "framework": {
+    "slug": "nextjs",
+    "version": "15.0.3"
+  },
+  "environment": {
+    "__NEXT_BUILD_ID": "dJXSEEqRPcq73ACfAFbt6",
+    "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "pVSNP2+YGvVFAVELAyMQQPiE23JyfkB+rly3UtQfiEo=",
+    "__NEXT_PREVIEW_MODE_ID": "450021af3eab63d9513fb69bcaa86a88",
+    "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "5081416e0aeaf3e7e102c322835457b13fac13311ea35a03d925822652bc2244",
+    "__NEXT_PREVIEW_MODE_SIGNING_KEY": "e7f03216ffed4138227cf2cfd1e50940e3c8ea035453ac5b966ff38783669be2"
+  }
+}

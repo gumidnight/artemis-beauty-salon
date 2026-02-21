@@ -1,3 +1,7 @@
+export const runtime = 'edge';
+
+
+
 import type { Metadata } from "next";
 import { cookies } from "next/headers";
 import site from "@/content/site.json";
